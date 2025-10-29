@@ -1,0 +1,167 @@
+/* ⚡ Futuristic Neon Glass Theme – 2025 Edition ⚡ */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500&display=swap');
+
+:root {
+  --bg-color: #030014;
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --primary: #00fff7;
+  --secondary: #ff00ff;
+  --text: #e0e0e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(-45deg, #0b001e, #160040, #002245, #25004a);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary), 0 0 20px var(--secondary);
+  letter-spacing: 1px;
+}
+
+.container {
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15), inset 0 0 25px rgba(255, 255, 255, 0.05);
+  padding: 3rem 3.5rem;
+  width: 380px;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+p {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #b0b0b0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+label {
+  font-weight: 500;
+  color: var(--primary);
+  text-shadow: 0 0 6px var(--primary);
+}
+
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  background: rgba(10, 10, 30, 0.9);
+  color: var(--text);
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+input:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 15px var(--secondary);
+}
+
+button {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  background-size: 200%;
+  color: #000;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+button:hover {
+  background-position: right;
+  transform: scale(1.08);
+  box-shadow: 0 0 30px var(--secondary), 0 0 60px var(--primary);
+}
+
+.result-box {
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.result-box h2 {
+  text-align: center;
+  color: var(--secondary);
+  text-shadow: 0 0 15px var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.result-box ul {
+  list-style: none;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.result-box li {
+  padding: 0.4rem 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  text-shadow: 0 0 10px var(--secondary);
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  color: #888;
+  font-size: 0.9rem;
+  text-shadow: 0 0 6px var(--primary);
+}
+
+/* --- Animations --- */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); }
+  50% { box-shadow: 0 0 35px rgba(255, 0, 255, 0.4); }
+}
